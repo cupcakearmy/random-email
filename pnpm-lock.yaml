@@ -5,6 +5,7 @@ specifiers:
   '@sveltejs/kit': ^1.0.0-next.240
   attractions: ^3.7.0
   copy-to-clipboard: ^3.3.1
+  postcss: ^8.4.5
   sass: ^1.49.0
   svelte: ^3.46.2
   svelte-check: ^2.3.0
@@ -18,11 +19,12 @@ dependencies:
 devDependencies:
   '@sveltejs/adapter-auto': 1.0.0-next.14
   '@sveltejs/kit': 1.0.0-next.240_sass@1.49.0+svelte@3.46.2
-  attractions: 3.7.0_1e02df163ab25b6f6dd3a1810975ed50
+  attractions: 3.7.0_6022bac8d79741f3fec2ae8056870d6c
+  postcss: 8.4.5
   sass: 1.49.0
   svelte: 3.46.2
-  svelte-check: 2.3.0_sass@1.49.0+svelte@3.46.2
-  svelte-preprocess: 4.10.2_7185e5bbca9941e8a76052fa3c9acf72
+  svelte-check: 2.3.0_77d7750cf002ab9dbc05a2cb89869e71
+  svelte-preprocess: 4.10.2_6fe01f8f1773f994db5be9837dcb915c
   tslib: 2.3.1
   typescript: 4.5.5
 
@@ -152,7 +154,7 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /attractions/3.7.0_1e02df163ab25b6f6dd3a1810975ed50:
+  /attractions/3.7.0_6022bac8d79741f3fec2ae8056870d6c:
     resolution: {integrity: sha512-Se8fyAr80gHJf0qClk2cK7hndjHPU0X6netBbau/g0rBPC+L6HxKAYVqwYfb5pTXxtFx6k63Uvj0LDL/6/P3rg==}
     peerDependencies:
       postcss: '>=7 <9'
@@ -160,9 +162,10 @@ packages:
       svelte: ^3.31.0
       svelte-preprocess: ^4.0.10
     dependencies:
+      postcss: 8.4.5
       sass: 1.49.0
       svelte: 3.46.2
-      svelte-preprocess: 4.10.2_7185e5bbca9941e8a76052fa3c9acf72
+      svelte-preprocess: 4.10.2_6fe01f8f1773f994db5be9837dcb915c
     dev: true
 
   /balanced-match/1.0.2:
@@ -756,7 +759,7 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /svelte-check/2.3.0_sass@1.49.0+svelte@3.46.2:
+  /svelte-check/2.3.0_77d7750cf002ab9dbc05a2cb89869e71:
     resolution: {integrity: sha512-SBKdJyUmxzPmJf/ZPqDSQOoa9JzOcgEpV7u3UaYcgVn7fA0veZ3FA5JgLU8KYtf84Gp6guBVcrC7XKLjJa5SXQ==}
     hasBin: true
     peerDependencies:
@@ -770,7 +773,7 @@ packages:
       sade: 1.8.1
       source-map: 0.7.3
       svelte: 3.46.2
-      svelte-preprocess: 4.10.2_7185e5bbca9941e8a76052fa3c9acf72
+      svelte-preprocess: 4.10.2_6fe01f8f1773f994db5be9837dcb915c
       typescript: 4.5.5
     transitivePeerDependencies:
       - '@babel/core'
@@ -793,7 +796,7 @@ packages:
       svelte: 3.46.2
     dev: true
 
-  /svelte-preprocess/4.10.2_7185e5bbca9941e8a76052fa3c9acf72:
+  /svelte-preprocess/4.10.2_6fe01f8f1773f994db5be9837dcb915c:
     resolution: {integrity: sha512-aPpkCreSo8EL/y8kJSa1trhiX0oyAtTjlNNM7BNjRAsMJ8Yy2LtqHt0zyd4pQPXt+D4PzbO3qTjjio3kwOxDlA==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
@@ -838,6 +841,7 @@ packages:
       '@types/sass': 1.43.1
       detect-indent: 6.1.0
       magic-string: 0.25.7
+      postcss: 8.4.5
       sass: 1.49.0
       sorcery: 0.10.0
       strip-indent: 3.0.0

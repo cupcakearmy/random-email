@@ -2,6 +2,7 @@
   import copy from 'copy-to-clipboard'
   import { Button, TextField, Headline, Chip } from 'attractions'
   import { domain } from '$lib/store'
+  import { onMount } from 'svelte'
 
   let chosen: string | null = null
 
@@ -17,6 +18,14 @@
     chosen = rand(16) + '@' + $domain
     copy(chosen)
   }
+
+  onMount(() => {
+    window.document.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        generate()
+      }
+    })
+  })
 </script>
 
 <Headline>Random Email</Headline>
@@ -28,7 +37,12 @@
 </TextField>
 <br />
 
-<Button filled on:click={generate}>Generate & Copy</Button>
+<div class="cta">
+  <Button filled on:click={generate}>Generate & Copy</Button>
+  <div>
+    or press <kbd>Enter</kbd>
+  </div>
+</div>
 
 {#if chosen}
   <br />
@@ -36,3 +50,16 @@
   <br />
   <Chip small>Copied to clipboard ✔️</Chip>
 {/if}
+
+<style>
+  .cta {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+  }
+
+  .cta > div {
+    margin-left: 0.5rem;
+    font-size: 0.75em;
+  }
+</style>
