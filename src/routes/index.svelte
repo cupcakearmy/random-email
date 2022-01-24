@@ -28,7 +28,7 @@
   })
 </script>
 
-<Headline>Random Email</Headline>
+<Headline>Random Email Generator</Headline>
 <p>Generate random email addresses for a given domain</p>
 
 <br />
